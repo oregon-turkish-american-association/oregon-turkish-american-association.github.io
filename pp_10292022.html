@@ -82,7 +82,7 @@ layout: default
               </tr>
               <tr style="border-bottom: 1px solid #ddd;">
 
-                <td style="padding: 20px;" align="left">Children (10 and below)</td>
+                <td style="padding: 20px;" align="left">Children (10 yrs and younger)</td>
                 <td style="padding: 5px;" align="center">$30.00</td>
                 <td colspan="3" style="padding: 5px;" align="center">
                     <label style="display: block;"><span style="z-index: 1;position: absolute;padding-top: 25px">Kids Menu</span>
@@ -291,8 +291,8 @@ var i,j=0,des;
                     "&amount_"       + j + "=" + order[i].amt;
 }
   }
-  //if (j > 0) window.open (strn, "paypal", winpar);
-  window.location.href = strn;
+  if (j > 0) window.open (strn, "paypal", winpar);
+  //window.location.href = strn;
 }
 
 
