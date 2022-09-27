@@ -38,7 +38,7 @@ layout: default
       <div style="margin-top:100px;text-align:left;">
         <h2 class="title text-center" style="margin-bottom: 0px;">Celebration of the Republic Day<br>Saturday, October 29th, 2022 @ 6pm</h2>
         <h4 style="
-    text-align: center;">DoubleTree by Hilton Hotel | 1000 NE Multnomah Street, Portland, OR 97232</h4>
+    text-align: center;">DoubleTree by Hilton Hotel | <a href="https://goo.gl/maps/8L3Vne82Fybe7b6s6">1000 NE Multnomah Street, Portland, OR 97232</a></h4>
         <br>
             <!-- Payment Form Starts Here -->
             <form class="form-inline" role="form" name="orderf" id="orderf" method="post" action="javascript:void 0;" style="
@@ -55,21 +55,27 @@ layout: default
                 <th style="padding: 10px; text-align: right;" align="right">  Total  </th>
               </tr>
               <tr style="border-bottom: 1px solid #ddd;">
-                <td style="padding: 20px;" align="left">Adults</td>
-                <td style="padding: 5px;" align="center">$110.00</td>
+                <td style="padding: 20px;" align="left">Adult Meal (With Alcohol)</td>
+                <td style="padding: 5px;" align="center">$120.00</td>
                 <td style="padding: 5px;" align="center">
-                  <label style="display: block;"><span style="z-index: 1;position: absolute;padding-top: 25px">Lamb</span>
-                     <input type="text" style="text-align: center;" name="qty111" size="3" value="0" onchange="GetOrder ('id111','Adults',110);" onfocus="this.value = ''" onblur="(this.value == '') &amp;&amp; (this.value = '0');GetOrder ('id111','Adults',110);">
+                  <label style="display: block;"><span style="z-index: 1;position: absolute;padding-top: 25px">Chicken</span>
+                     <input type="text" style="text-align: center;" name="qty111" size="3" value="0" onchange="GetOrder ('id111','AdultsChk',120);" onfocus="this.value = ''" onblur="(this.value == '') &amp;&amp; (this.value = '0');GetOrder ('id111','AdultsChk',120);">
                   </label>
                 </td>
                 <td style="padding: 5px;" align="center">
-                    <label style="display: block;"><span style="z-index: 1;position: absolute;padding-top: 25px; padding-left: 5px;">Fish</span>
-                      <input type="text" style="text-align: center;" name="qty112" size="3" value="0" onchange="GetOrder ('id112','Adults',110);" onfocus="this.value = ''" onblur="(this.value == '') &amp;&amp; (this.value = '0');GetOrder ('id112','Adults',110);">
+                    <label style="display: block;"><span style="z-index: 1;position: absolute;padding-top: 25px; padding-left: 5px;">Steak</span>
+                      <input type="text" style="text-align: center;" name="qty112" size="3" value="0" onchange="GetOrder ('id112','AdultsStk',120);" onfocus="this.value = ''" onblur="(this.value == '') &amp;&amp; (this.value = '0');GetOrder ('id112','AdultsStk',120);">
                   </label>
                 </td>
                 <td style="padding: 5px;" align="center">
-                    <label style="display: block;"><span style="z-index: 1;position: absolute;padding-top: 25px">Veggie</span>
-                      <input type="text" style="text-align: center;" name="qty113" size="3" value="0" onchange="GetOrder ('id113','Adults',110);" onfocus="this.value = ''" onblur="(this.value == '') &amp;&amp; (this.value = '0');GetOrder ('id113','Adults',110);">
+                    <label style="display: block;"><span style="z-index: 1;position: absolute;padding-top: 25px">Vegetarian</span>
+                      <input type="text" style="text-align: center;" name="qty113" size="3" value="0" onchange="GetOrder ('id113','AdultsVet',120);" onfocus="this.value = ''" onblur="(this.value == '') &amp;&amp; (this.value = '0');GetOrder ('id113','AdultsVet',120);">
+                  </label>
+                </td>
+                
+                <td style="padding: 5px;" align="center">
+                    <label style="display: block;"><span style="z-index: 1;position: absolute;padding-top: 25px">Vegan</span>
+                      <input type="text" style="text-align: center;" name="qty114" size="3" value="0" onchange="GetOrder ('id114','AdultsVeg',120);" onfocus="this.value = ''" onblur="(this.value == '') &amp;&amp; (this.value = '0');GetOrder ('id114','AdultsVeg',120);">
                   </label>
                 </td>
 
@@ -77,9 +83,42 @@ layout: default
                   <input style="background-color: transparent; border: none; text-align: right;" class="nbor" type="hidden" name="prc111" size="6" value="0" readonly="">
                   <input style="background-color: transparent; border: none; text-align: right;" class="nbor" type="hidden" name="prc112" size="6" value="0" readonly="">
                   <input style="background-color: transparent; border: none; text-align: right;" class="nbor" type="hidden" name="prc113" size="6" value="0" readonly="">                  
+                  <input style="background-color: transparent; border: none; text-align: right;" class="nbor" type="hidden" name="prc114" size="6" value="0" readonly="">  
                   <input style="background-color: transparent; border: none; text-align: right;" class="nbor" type="text" name="prc110" size="6" value="0" readonly="">
                 </td>
               </tr>
+                
+              <tr style="border-bottom: 1px solid #ddd;">
+                <td style="padding: 20px;" align="left">Adult Meal (No Alcohol)</td>
+                <td style="padding: 5px;" align="center">$100.00</td>
+                <td style="padding: 5px;" align="center">
+                  <label style="display: block;"><span style="z-index: 1;position: absolute;padding-top: 25px">Lamb</span>
+                     <input type="text" style="text-align: center;" name="qty211" size="3" value="0" onchange="GetOrder ('id211','AdultsNOalcChk',100);" onfocus="this.value = ''" onblur="(this.value == '') &amp;&amp; (this.value = '0');GetOrder ('id211','AdultsNoalcChk',100);">
+                  </label>
+                </td>
+                <td style="padding: 5px;" align="center">
+                    <label style="display: block;"><span style="z-index: 1;position: absolute;padding-top: 25px; padding-left: 5px;">Fish</span>
+                      <input type="text" style="text-align: center;" name="qty212" size="3" value="0" onchange="GetOrder ('id212','AdultsNOalcStk',100);" onfocus="this.value = ''" onblur="(this.value == '') &amp;&amp; (this.value = '0');GetOrder ('id212','AdultsNOalcStk',100);">
+                  </label>
+                </td>
+                <td style="padding: 5px;" align="center">
+                    <label style="display: block;"><span style="z-index: 1;position: absolute;padding-top: 25px">Vegeterian</span>
+                      <input type="text" style="text-align: center;" name="qty213" size="3" value="0" onchange="GetOrder ('id213','AdultsNOalcVet',100);" onfocus="this.value = ''" onblur="(this.value == '') &amp;&amp; (this.value = '0');GetOrder ('id213','AdultsNOalcVet',100);">
+                  </label>
+                </td>
+                <td style="padding: 5px;" align="center">
+                    <label style="display: block;"><span style="z-index: 1;position: absolute;padding-top: 25px">Vegan</span>
+                      <input type="text" style="text-align: center;" name="qty214" size="3" value="0" onchange="GetOrder ('id214','AdultsNOalcVeg',100);" onfocus="this.value = ''" onblur="(this.value == '') &amp;&amp; (this.value = '0');GetOrder ('id214','AdultsNOalcVeg',100);">
+                  </label>
+                </td>
+                <td style="padding: 5px;" align="right">
+                  <input style="background-color: transparent; border: none; text-align: right;" class="nbor" type="hidden" name="prc211" size="6" value="0" readonly="">
+                  <input style="background-color: transparent; border: none; text-align: right;" class="nbor" type="hidden" name="prc212" size="6" value="0" readonly="">
+                  <input style="background-color: transparent; border: none; text-align: right;" class="nbor" type="hidden" name="prc213" size="6" value="0" readonly="">                  
+                  <input style="background-color: transparent; border: none; text-align: right;" class="nbor" type="hidden" name="prc214" size="6" value="0" readonly="">                  
+                  <input style="background-color: transparent; border: none; text-align: right;" class="nbor" type="text" name="prc210" size="6" value="0" readonly="">
+                </td>
+              </tr>                
               <tr style="border-bottom: 1px solid #ddd;">
 
                 <td style="padding: 20px;" align="left">Children (10 yrs and younger)</td>
