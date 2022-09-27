@@ -36,10 +36,9 @@ layout: default
 <section id="donate" class="donate section text-center">
   <div class="container">
       <div style="margin-top:100px;text-align:left;">
-        <h2 class="title text-center" style="margin-bottom: 0px;">The Republic Day Gala Dinner<br>Saturday, November 2nd, 2019</h2>
+        <h2 class="title text-center" style="margin-bottom: 0px;">Celebration of the Republic Day<br>Saturday, October 29th, 2022 @ 6pm</h2>
         <h4 style="
-    text-align: center;
-">The Benson Hotel Mayfair Ballroom | 309 SW Broadway, Portland, OR 97205</h4>
+    text-align: center;">DoubleTree by Hilton Hotel | 1000 NE Multnomah Street, Portland, OR 97232</h4>
         <br>
             <!-- Payment Form Starts Here -->
             <form class="form-inline" role="form" name="orderf" id="orderf" method="post" action="javascript:void 0;" style="
@@ -83,7 +82,7 @@ layout: default
               </tr>
               <tr style="border-bottom: 1px solid #ddd;">
 
-                <td style="padding: 20px;" align="left">Children</td>
+                <td style="padding: 20px;" align="left">Children (10 and below)</td>
                 <td style="padding: 5px;" align="center">$30.00</td>
                 <td colspan="3" style="padding: 5px;" align="center">
                     <label style="display: block;"><span style="z-index: 1;position: absolute;padding-top: 25px">Kids Menu</span>
@@ -185,7 +184,8 @@ root.tax  = off;    // tax selection line
 // place for user-specific options
 root.xx_can  = "";   // place for PayPal cancel return path
 root.xx_cur  = "USD";// enter default currency code (or null)
-root.xx_id   = "paypal@ortapdx.org";  //or merchant ID
+//root.xx_id   = "paypal@ortapdx.org";  //or merchant ID
+  root.xx_id   = "mae@aliergin.com";  //or merchant ID
 
 root.xx_img  = "http://ortapdx.org/images/ORTA_logo_tpt_s.png"; // image URL
 root.xx_lc   = "US"; // enter default country code (or null)
@@ -264,8 +264,8 @@ var winpar = "width=710,height=390,scrollbars," +
              "location,resizable,status";
 //Change the lines for either testing mode (sandbox) or live mode
 
-//var strn   = "https://www.sandbox.paypal.com/cgi-bin/webscr?cmd=_cart" + "&upload=1" + "&business=" + root.xx_id + root.xx_xtra;            
-var strn   = "https://www.paypal.com/cgi-bin/webscr?cmd=_cart" + "&upload=1" + "&business=" + root.xx_id + root.xx_xtra;
+var strn   = "https://www.sandbox.paypal.com/cgi-bin/webscr?cmd=_cart" + "&upload=1" + "&business=" + root.xx_id + root.xx_xtra;            
+//var strn   = "https://www.paypal.com/cgi-bin/webscr?cmd=_cart" + "&upload=1" + "&business=" + root.xx_id + root.xx_xtra;
  
 var i,j=0,des;
   if (root.xx_cur.length > 0)
