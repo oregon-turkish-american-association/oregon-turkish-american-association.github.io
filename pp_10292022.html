@@ -281,6 +281,10 @@ var op = new Array ();    // accumulate options here
                                              + Number(document.orderf["prc112"].value) 
                                              + Number(document.orderf["prc113"].value)
                                              + Number(document.orderf["prc114"].value));
+  document.orderf["prc210"].value = Dollar (Number(document.orderf["prc211"].value) 
+                                             + Number(document.orderf["prc212"].value) 
+                                             + Number(document.orderf["prc213"].value)
+                                             + Number(document.orderf["prc214"].value));
   if (cntr == 0) order = new Object (); // zap object
   cntr = cntr + 1;               // bump counter so no zap next time
   order[id] = new Object ();     // create new entry
