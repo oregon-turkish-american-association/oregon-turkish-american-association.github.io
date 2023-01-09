@@ -55,15 +55,7 @@ layout: default
         <input type="hidden" name="currency_code" value="USD">
         <input type="hidden" name="shopping_url" value="https://ortapdx.org/pp_02122023.html">
         
-        <!-- Specify the price that PayPal uses for each option. -->
-        <input type="hidden" name="option_index" value="1">
-        <input type="hidden" name="option_select0" value="Regular Meal (Ages 12 and older)">
-        <input type="hidden" name="option_amount0" value="20">
-        <input type="hidden" name="option_select1" value="Youth Meal (Ages 6 to 11)">
-        <input type="hidden" name="option_amount1" value="10">
-        <input type="hidden" name="option_select2" value="Free Kids Meal (Ages 5 and younger">
-        <input type="hidden" name="option_amount2" value="0">
-        
+       
         <!-- Provide a drop-down menu option field with prices. -->
         <p id="id_os1">
         <input type="hidden" name="on1" value="Ticket Type">
@@ -76,6 +68,15 @@ layout: default
             <option value="Free Kids Meal">Free Kids Meal (Ages 5 and younger) - $0.00</option>
         </select>
         </p>
+        
+        <!-- Specify the price that PayPal uses for above options. -->
+        <input type="hidden" name="option_index" value="1">
+        <input type="hidden" name="option_select0" value="Regular Meal (Ages 12 and older)">
+        <input type="hidden" name="option_amount0" value="20">
+        <input type="hidden" name="option_select1" value="Youth Meal (Ages 6 to 11)">
+        <input type="hidden" name="option_amount1" value="10">
+        <input type="hidden" name="option_select2" value="Free Kids Meal (Ages 5 and younger">
+        <input type="hidden" name="option_amount2" value="0">
 
         <!-- Provide a drop-down menu option field. -->        
         <p id="id_os2" style="visibility:hidden">
