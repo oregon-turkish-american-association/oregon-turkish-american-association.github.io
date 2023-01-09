@@ -57,12 +57,11 @@ layout: default
         
        
         <!-- Provide a drop-down menu option field with prices. -->
-        <p id="id_os1">
-        <input type="hidden" name="on1" value="Ticket Type">
-        <label for="os1">Ticket Type</label>
-        <select name="os1" id="os1">
-            <option
-                value="Select type of ticket">-- Select the type of ticket to purchase--</option>
+        <p id="id_os0">
+        <input type="hidden" name="on0" value="Ticket Type">
+        <label for="os0">Ticket Type</label>
+        <select name="os0" id="os0">
+            <option value="Select type of ticket">-- Select the type of ticket to purchase--</option>
             <option value="Regular Meal">Regular Meal (Ages 12 and older) - $20.00</option>
             <option value="Youth Meal">Youth Meal (Ages 6 to 11) - $10.00</option>
             <option value="Free Kids Meal">Free Kids Meal (Ages 5 and younger) - $0.00</option>
@@ -71,18 +70,18 @@ layout: default
         
         <!-- Specify the price that PayPal uses for above options. -->
         <input type="hidden" name="option_index" value="1">
-        <input type="hidden" name="option_select0" value="Regular Meal (Ages 12 and older)">
+        <input type="hidden" name="option_select0" value="Regular Meal">
         <input type="hidden" name="option_amount0" value="20">
-        <input type="hidden" name="option_select1" value="Youth Meal (Ages 6 to 11)">
+        <input type="hidden" name="option_select1" value="Youth Meal">
         <input type="hidden" name="option_amount1" value="10">
-        <input type="hidden" name="option_select2" value="Free Kids Meal (Ages 5 and younger">
+        <input type="hidden" name="option_select2" value="Free Kids Meal">
         <input type="hidden" name="option_amount2" value="0">
 
         <!-- Provide a drop-down menu option field. -->        
-        <p id="id_os2" style="visibility:hidden">
-        <input type="hidden" name="on2" value="Bean Dish Choice">
-        <label for="os2">Bean Dish Choice</label>
-            <select name="os2" id="os2">
+        <p id="id_os1" style="visibility:hidden">
+        <input type="hidden" name="on1" value="Bean Dish Choice">
+        <label for="os1">Bean Dish Choice</label>
+            <select name="os1" id="os1">
                 <option value="Please make a Bean Dish choice">
                     -- Please make a Bean Dish choice --</option>
                 <option value="BeansWithMeat">Beans w/ Meat</option>
@@ -92,10 +91,10 @@ layout: default
         </p>
         
         <!-- Provide a drop-down menu option field. -->        
-        <p id="id_os3" style="visibility:hidden">
-        <input type="hidden" name="on3" value="Garnish Choice">
-        <label for="os3">Garnish Choice</label>
-            <select name="os3" id="os3">
+        <p id="id_os2" style="visibility:hidden">
+        <input type="hidden" name="on2" value="Garnish Choice">
+        <label for="os2">Garnish Choice</label>
+            <select name="os2" id="os2">
                 <option value="Please make a Garnish choice">
                     -- Please make a Garnish choice --</option>
                 <option value="RiceAndPickles">Rice and Pickles</option>
@@ -106,10 +105,10 @@ layout: default
         </p>
         
         <!-- Provide a drop-down menu option field. -->        
-        <p id="id_os4" style="visibility:hidden">
-        <input type="hidden" name="on4" value="Dessert Choice">
-        <label for="os4">Dessert Choice</label>
-            <select name="os4" id="os4">
+        <p id="id_os3" style="visibility:hidden">
+        <input type="hidden" name="on3" value="Dessert Choice">
+        <label for="os3">Dessert Choice</label>
+            <select name="os3" id="os3">
                 <option value="Select a dessert option">
                     -- Select a dessert option --</option>
                 <option value="Baklava">Baklava</option>
@@ -119,10 +118,10 @@ layout: default
         </p>
         
         <!-- Provide a drop-down menu option field. -->
-        <p id="id_os5" style="visibility:hidden">
-        <input type="hidden" name="on5" value="Drink Choice">
-        <label for="os5">Drink Choice</label>
-            <select name="os5" id="os5">
+        <p id="id_os4" style="visibility:hidden">
+        <input type="hidden" name="on4" value="Drink Choice">
+        <label for="os4">Drink Choice</label>
+            <select name="os4" id="os4">
                 <option value="Please indicate your drink preference">
                     -- Please indicate your drink preference --</option>
                 <option value="Ayran">Cup of Yogurt Drink (Ayran)</option>
@@ -184,33 +183,33 @@ layout: default
     <script type="text/javascript" src="https://code.jquery.com/jquery-1.7.1.min.js"></script>
 
     <script type="text/javascript">
-    $('#os1').on('change', function () {
+    $('#os0').on('change', function () {
     
-        <!-- $("#id_os2").css('visibility', (true) ? 'hidden' : ''); -->
-        $("#id_os2").css('visibility', (this.value != 'Free Kids Meal' && this.value != 'Select type of ticket') ? 'visible' : 'hidden');
+        <!-- $("#id_os1").css('visibility', (true) ? 'hidden' : ''); -->
+        $("#id_os1").css('visibility', (this.value != 'Free Kids Meal' && this.value != 'Select type of ticket') ? 'visible' : 'hidden');
+        $("#id_os2").css('visibility', (true) ? 'hidden' : '');
         $("#id_os3").css('visibility', (true) ? 'hidden' : '');
         $("#id_os4").css('visibility', (true) ? 'hidden' : '');
-        $("#id_os5").css('visibility', (true) ? 'hidden' : '');
+    });
+
+    $('#os1').on('change', function () {
+        $("#id_os1").css('visibility', (this.value != 'Please make a Bean Dish choice') ? 'visible' : 'hidden');
+        $("#id_os2").css('visibility', (true) ? 'hidden' : '');
+        $("#id_os3").css('visibility', (true) ? 'hidden' : '');
+        $("#id_os4").css('visibility', (true) ? 'hidden' : '');
     });
 
     $('#os2').on('change', function () {
-        $("#id_os2").css('visibility', (this.value != 'Please make a Bean Dish choice') ? 'visible' : 'hidden');
+        $("#id_os2").css('visibility', (this.value != 'Please make a Garnish choice') ? 'visible' : 'hidden');        
         $("#id_os3").css('visibility', (true) ? 'hidden' : '');
         $("#id_os4").css('visibility', (true) ? 'hidden' : '');
-        $("#id_os5").css('visibility', (true) ? 'hidden' : '');
-    });
-
-    $('#os3').on('change', function () {
-        $("#id_os3").css('visibility', (this.value != 'Please make a Garnish choice') ? 'visible' : 'hidden');        
-        $("#id_os4").css('visibility', (true) ? 'hidden' : '');
-        $("#id_os5").css('visibility', (true) ? 'hidden' : '');
 <! --        $("#id_os4").css('visibility', (this.value != 'Select a desert option' && document.getElementById('os1').value == 'Adult Meal') ? 'visible' : 'hidden'); -->
     });
       
-    $('#os4').on('change', function () {
+    $('#os3').on('change', function () {
         
-        $("#id_os4").css('visibility', (this.value != 'Select a dessert option') ? 'visible' : 'hidden');  
-        $("#id_os5").css('visibility', (true) ? 'hidden' : '');
+        $("#id_os3").css('visibility', (this.value != 'Select a dessert option') ? 'visible' : 'hidden');  
+        $("#id_os4").css('visibility', (true) ? 'hidden' : '');
     });
 
     </script>
