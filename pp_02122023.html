@@ -180,8 +180,6 @@ layout: default
 
     <script type="text/javascript">
     $('#os0').on('change', function () {
-    
-        <!-- $("#id_os1").css('visibility', (true) ? 'hidden' : ''); -->
         $("#id_os1").css('visibility', (this.value != 'Free Kids Meal' && this.value != 'Select type of ticket') ? 'visible' : 'hidden');
         $("#id_os2").css('visibility', (true) ? 'hidden' : '');
         $("#id_os3").css('visibility', (true) ? 'hidden' : '');
@@ -189,23 +187,19 @@ layout: default
     });
 
     $('#os1').on('change', function () {
-        $("#id_os1").css('visibility', (this.value != 'Please make a Bean Dish choice') ? 'visible' : 'hidden');
-        $("#id_os2").css('visibility', (true) ? 'hidden' : '');
+        $("#id_os2").css('visibility', (this.value != 'Please make a Bean Dish choice') ? 'visible' : 'hidden');
         $("#id_os3").css('visibility', (true) ? 'hidden' : '');
         $("#id_os4").css('visibility', (true) ? 'hidden' : '');
     });
 
     $('#os2').on('change', function () {
-        $("#id_os2").css('visibility', (this.value != 'Please make a Garnish choice') ? 'visible' : 'hidden');        
-        $("#id_os3").css('visibility', (true) ? 'hidden' : '');
+        $("#id_os3").css('visibility', (this.value != 'Please make a Garnish choice') ? 'visible' : 'hidden');        
         $("#id_os4").css('visibility', (true) ? 'hidden' : '');
 /*      $("#id_os4").css('visibility', (this.value != 'Select a desert option' && document.getElementById('os1').value == 'Adult Meal') ? 'visible' : 'hidden'); */
     });
       
     $('#os3').on('change', function () {
-        
-        $("#id_os3").css('visibility', (this.value != 'Select a dessert option') ? 'visible' : 'hidden');  
-        $("#id_os4").css('visibility', (true) ? 'hidden' : '');
+        $("#id_os4").css('visibility', (this.value != 'Select a dessert option') ? 'visible' : 'hidden');  
     });
 
     </script>
