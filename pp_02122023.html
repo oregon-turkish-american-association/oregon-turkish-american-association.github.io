@@ -82,8 +82,7 @@ layout: default
         <input type="hidden" name="on1" value="Bean Dish Choice">
         <label for="os1">Bean Dish Choice</label>
             <select name="os1" id="os1">
-                <option value="Please make a Bean Dish choice">
-                    -- Please make a Bean Dish choice --</option>
+                <option value="Please make a Bean Dish choice">-- Please make a Bean Dish choice --</option>
                 <option value="BeansWithMeat">Beans w/ Meat</option>
                 <option value="BeansWithNoMeat">Beans w/o Meat (Vegan)</option>
                 <option value="NoBeans">No Beans</option>
@@ -95,8 +94,7 @@ layout: default
         <input type="hidden" name="on2" value="Garnish Choice">
         <label for="os2">Garnish Choice</label>
             <select name="os2" id="os2">
-                <option value="Please make a Garnish choice">
-                    -- Please make a Garnish choice --</option>
+                <option value="Please make a Garnish choice">-- Please make a Garnish choice --</option>
                 <option value="RiceAndPickles">Rice and Pickles</option>
                 <option value="RiceOnly">Rice Only</option>
                 <option value="PicklesOnly">Pickles Only</option>
@@ -109,8 +107,7 @@ layout: default
         <input type="hidden" name="on3" value="Dessert Choice">
         <label for="os3">Dessert Choice</label>
             <select name="os3" id="os3">
-                <option value="Select a dessert option">
-                    -- Select a dessert option --</option>
+                <option value="Select a dessert option">-- Select a dessert option --</option>
                 <option value="Baklava">Baklava</option>
                 <option value="Sekerpare">Sekerpare</option>
                 <option value="NoDesert">Skip Desert</option>
@@ -122,8 +119,7 @@ layout: default
         <input type="hidden" name="on4" value="Drink Choice">
         <label for="os4">Drink Choice</label>
             <select name="os4" id="os4">
-                <option value="Please indicate your drink preference">
-                    -- Please indicate your drink preference --</option>
+                <option value="Please indicate your drink preference">-- Please indicate your drink preference --</option>
                 <option value="Ayran">Cup of Yogurt Drink (Ayran)</option>
                 <option value="NoAyran">Skip the Yogurt Drink (Ayran)</option>
             </select>
@@ -203,7 +199,7 @@ layout: default
         $("#id_os2").css('visibility', (this.value != 'Please make a Garnish choice') ? 'visible' : 'hidden');        
         $("#id_os3").css('visibility', (true) ? 'hidden' : '');
         $("#id_os4").css('visibility', (true) ? 'hidden' : '');
-<! --        $("#id_os4").css('visibility', (this.value != 'Select a desert option' && document.getElementById('os1').value == 'Adult Meal') ? 'visible' : 'hidden'); -->
+/*      $("#id_os4").css('visibility', (this.value != 'Select a desert option' && document.getElementById('os1').value == 'Adult Meal') ? 'visible' : 'hidden'); */
     });
       
     $('#os3').on('change', function () {
