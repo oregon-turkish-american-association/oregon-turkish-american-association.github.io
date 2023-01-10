@@ -312,7 +312,7 @@ var strn   = "https://www.paypal.com/cgi-bin/webscr?cmd=_cart" + "&upload=1" + "
  
 var i,j=0,des;
   
-  strn = strn + "&custom=" + document.orderf["prc20"].value;
+  strn = strn + "&custom=" + document.orderf["contact"].value;
   
   if (root.xx_cur.length > 0)
     strn = strn + "&currency_code=" + root.xx_cur;
@@ -337,9 +337,9 @@ var i,j=0,des;
                     "&amount_"       + j + "=" + order[i].amt;
 }
   }
-  //if (j > 0) window.open (strn, "paypal", winpar);
+  if (j > 0) window.open (strn, "paypal", winpar);
   
-  window.location.href = strn;
+  //window.location.href = strn;
 }
 
 
