@@ -56,49 +56,68 @@ layout: default
                 <th style="padding: 10px; text-align: right;" align="right">  Total  </th>
               </tr>
               <tr style="border-bottom: 1px solid #ddd;">
-                <td style="padding: 20px;" align="left">Regular (Ages 12 and up)</td>
+                <td style="padding: 20px;" align="left">Regular (Ages 12 and older)</td>
                 <td style="padding: 5px;" align="center">$20.00</td>
                 <td style="padding: 5px;" align="center">
                   <label style="display: block;"><span style="z-index: 1;position: absolute;padding-top: 25px">Beans w/Meat</span>
-                     <input type="text" style="text-align: center;" name="qty111" size="3" value="0" onchange="GetOrder ('id111','Adults',20);" onfocus="this.value = ''" onblur="(this.value == '') &amp;&amp; (this.value = '0');GetOrder ('id111','Adults',110);">
+                     <input type="text" style="text-align: center;" name="qty21" size="8" value="0" onchange="GetOrder ('id21','Adults',20);" onfocus="this.value = ''" onblur="(this.value == '') &amp;&amp; (this.value = '0');GetOrder ('id21','Adults',20);">
                   </label>
                 </td>
                 <td style="padding: 5px;" align="center">
-                    <label style="display: block;"><span style="z-index: 1;position: absolute;padding-top: 25px; padding-left: 5px;">Beans Vegan</span>
-                      <input type="text" style="text-align: center;" name="qty112" size="3" value="0" onchange="GetOrder ('id112','Adults',20);" onfocus="this.value = ''" onblur="(this.value == '') &amp;&amp; (this.value = '0');GetOrder ('id112','Adults',110);">
+                    <label style="display: block;"><span style="z-index: 1;position: absolute;padding-top: 25px; padding-left: 5px;">Vegan Beans</span>
+                      <input type="text" style="text-align: center;" name="qty22" size="8" value="0" onchange="GetOrder ('id22','Adults',20);" onfocus="this.value = ''" onblur="(this.value == '') &amp;&amp; (this.value = '0');GetOrder ('id22','Adults',20);">
                   </label>
                 </td>
 
 
                 <td style="padding: 5px;" align="right">
-                  <input style="background-color: transparent; border: none; text-align: right;" class="nbor" type="hidden" name="prc111" size="6" value="0" readonly="">
-                  <input style="background-color: transparent; border: none; text-align: right;" class="nbor" type="hidden" name="prc112" size="6" value="0" readonly="">
-                  <input style="background-color: transparent; border: none; text-align: right;" class="nbor" type="hidden" name="prc113" size="6" value="0" readonly="">                  
-                  <input style="background-color: transparent; border: none; text-align: right;" class="nbor" type="text" name="prc110" size="6" value="0" readonly="">
+                  <input style="background-color: transparent; border: none; text-align: right;" class="nbor" type="hidden" name="prc21" size="6" value="0" readonly="">
+                  <input style="background-color: transparent; border: none; text-align: right;" class="nbor" type="hidden" name="prc22" size="6" value="0" readonly="">
+                  <input style="background-color: transparent; border: none; text-align: right;" class="nbor" type="hidden" name="prc23" size="6" value="0" readonly="">                  
                 </td>
               </tr>
               <tr style="border-bottom: 1px solid #ddd;">
 
-                <td style="padding: 20px;" align="left">Children (Ages 6 to 11</td>
+                <td style="padding: 20px;" align="left">Children (Ages 6 to 11)</td>
                 <td style="padding: 5px;" align="center">$10.00</td>
                 <td style="padding: 5px;" align="center">
-                    <label style="display: block;"><span style="z-index: 1;position: absolute;padding-top: 25px">Kids Menu</span>
+                    <label style="display: block;"><span style="z-index: 1;position: absolute;padding-top: 25px">Beans w/Meat</span>
                       <label style="visibility: hidden;">XX</label>
-                      <input type="text" style="text-align: center;" name="qty30" size="2" value="0" onchange="GetOrder ('id30','Children',10);" onfocus="this.value = ''" onblur="(this.value == '') &amp;&amp; (this.value = '0');GetOrder ('id30','Children',30);">
+                      <input type="text" style="text-align: center;" name="qty11" size="8" value="0" onchange="GetOrder ('id11','Children',10);" onfocus="this.value = ''" onblur="(this.value == '') &amp;&amp; (this.value = '0');GetOrder ('id11','Children',10);">
                   </label>
                 </td>
                 <td style="padding: 5px;" align="center">
-                    <label style="display: block;"><span style="z-index: 1;position: absolute;padding-top: 25px">Kids Menu</span>
+                    <label style="display: block;"><span style="z-index: 1;position: absolute;padding-top: 25px">Vegan Beans</span>
                       <label style="visibility: hidden;">XX</label>
-                      <input type="text" style="text-align: center;" name="qty31" size="2" value="0" onchange="GetOrder ('id31','Children',10);" onfocus="this.value = ''" onblur="(this.value == '') &amp;&amp; (this.value = '0');GetOrder ('id30','Children',30);">
+                      <input type="text" style="text-align: center;" name="qty12" size="8" value="0" onchange="GetOrder ('id12','Children',10);" onfocus="this.value = ''" onblur="(this.value == '') &amp;&amp; (this.value = '0');GetOrder ('id12','Children',10);">
                   </label>
                 </td>
                 <td style="padding: 5px;" align="right">
-                  <input style="background-color: transparent; border: none; text-align: right;" class="nbor" type="text" name="prc30" size="6" value="0" readonly="">
-                  <input style="background-color: transparent; border: none; text-align: right;" class="nbor" type="text" name="prc31" size="6" value="0" readonly="">
+                  <input style="background-color: transparent; border: none; text-align: right;" class="nbor" type="text" name="prc11" size="6" value="0" readonly="">
+                  <input style="background-color: transparent; border: none; text-align: right;" class="nbor" type="text" name="prc12" size="6" value="0" readonly="">
                 </td>
               </tr>
+            <tr style="border-bottom: 1px solid #ddd;">
 
+                <td style="padding: 20px;" align="left">Kids (Ages 5 and younger)</td>
+                <td style="padding: 5px;" align="center">$10.00</td>
+                <td style="padding: 5px;" align="center">
+                    <label style="display: block;"><span style="z-index: 1;position: absolute;padding-top: 25px">Beans w/Meat</span>
+                      <label style="visibility: hidden;">XX</label>
+                      <input type="text" style="text-align: center;" name="qty01" size="8" value="0" onchange="GetOrder ('id01','Kids',0);" onfocus="this.value = ''" onblur="(this.value == '') &amp;&amp; (this.value = '0');GetOrder ('id11','Children',10);">
+                  </label>
+                </td>
+                <td style="padding: 5px;" align="center">
+                    <label style="display: block;"><span style="z-index: 1;position: absolute;padding-top: 25px">Vegan Beans</span>
+                      <label style="visibility: hidden;">XX</label>
+                      <input type="text" style="text-align: center;" name="qty02" size="8" value="0" onchange="GetOrder ('id02','Kids',0);" onfocus="this.value = ''" onblur="(this.value == '') &amp;&amp; (this.value = '0');GetOrder ('id12','Children',10);">
+                  </label>
+                </td>
+                <td style="padding: 5px;" align="right">
+                  <input style="background-color: transparent; border: none; text-align: right;" class="nbor" type="text" name="prc01" size="6" value="0" readonly="">
+                  <input style="background-color: transparent; border: none; text-align: right;" class="nbor" type="text" name="prc02" size="6" value="0" readonly="">
+                </td>
+              </tr>
               <tr style="border-bottom: 1px solid #ddd;border-top: 1px solid #ddd;">
 
                 <td style="padding: 20px;" align="right" colspan="5">(Optional) Add a tax-deductible donation to ORTA:</td>
