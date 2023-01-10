@@ -36,10 +36,9 @@ layout: default
 <section id="donate" class="donate section text-center">
   <div class="container">
       <div style="margin-top:100px;text-align:left;">
-        <h2 class="title text-center" style="margin-bottom: 0px;">The Republic Day Gala Dinner<br>Saturday, November 2nd, 2019</h2>
+        <h2 class="title text-center" style="margin-bottom: 0px;">ORTA Community Gathering: Bean-Rice Event<br>Sunday, February 12th, 2023 1PM-4PM</h2>
         <h4 style="
-    text-align: center;
-">The Benson Hotel Mayfair Ballroom | 309 SW Broadway, Portland, OR 97205</h4>
+    text-align: center;">Hillsboro Community Senior Center | <a href="https://goo.gl/maps/ywJ1tfWm9hMeiaGe6">750 SE 8th Ave, Hillsboro, OR 97123</a></h4>
         <br>
             <!-- Payment Form Starts Here -->
             <form class="form-inline" role="form" name="orderf" id="orderf" method="post" action="javascript:void 0;" style="
@@ -131,6 +130,12 @@ layout: default
                   <input class="nbor" style="background-color: transparent; border: none; text-align: right;" type="text" name="tot" size="6" value="0" readonly="">
                 </td>
               </tr>
+              <tr style="text-align:right;">
+                <td style="padding: 5px;font-weight: bold;text-align: center;" colspan="6">
+                  <label for="box">Please Enter Your Contact Information Below</label> 
+                  <textarea id="box" name="contact" rows="3" cols="30">Name: <br>Email: <br>Phone #: <br></textarea>
+                </td>
+              </tr>
               <tr>
                 <td style="border: none; padding: 5px;" align="center" colspan="6">
                                 <br>
@@ -163,16 +168,16 @@ layout: default
 ">
            <li style="
     text-align: left;
-">Please feel free to purchase an adult ticket for your children, if you wish to get them the full dinner menu instead.</li>
+">Please feel free to purchase a regular meal ticket for your children, if you wish to get them a larger size serving of food.</li>
            <li style="
     text-align: left;
-">You can pay with a credit card (VISA, MC, AmEx, DISCOVER), or a PayPal account. For payments with check, make your check to ORTA, indicate your selections on the check and mail to Melike Kayım.</li>
+">You can pay with a credit card (VISA, MC, AmEx, DISCOVER), or a PayPal account. For payments with check, make your check to ORTA, indicate your selections on the check and mail to Hamra Bakırcıoğlu.</li>
            <li style="
     text-align: left;
-">Fair Market Value of Gala tickets are the same as their face values, thus ticket fees <b>are not tax-deductable</b> donations. Please consider adding donations to ORTA during your ticket purchase.</li>
+">Fair Market Value of these tickets are the same as their face values, thus ticket fees <b>are not tax-deductable</b> donations. Please consider adding donations to ORTA during your ticket purchase.</li>
            <li style="
     text-align: left;
-">More details on the event can be found at our <a href="https://www.facebook.com/events/543391633101150">Facebook Event Page</a></li>
+">More details on the event can be found at our <a href="https://www.facebook.com/events/499303585624521">Facebook Event Page</a></li>
         </ul>
          <br>
         </div><!--//btn-container-->
@@ -298,6 +303,9 @@ var winpar = "width=710,height=390,scrollbars," +
 var strn   = "https://www.paypal.com/cgi-bin/webscr?cmd=_cart" + "&upload=1" + "&business=" + root.xx_id + root.xx_xtra;
  
 var i,j=0,des;
+  
+  strn = strn + "&custom=" + document.orderf["prc20"].value;
+  
   if (root.xx_cur.length > 0)
     strn = strn + "&currency_code=" + root.xx_cur;
   if (root.xx_lc.length > 0)
@@ -322,6 +330,7 @@ var i,j=0,des;
 }
   }
   //if (j > 0) window.open (strn, "paypal", winpar);
+  
   window.location.href = strn;
 }
 
