@@ -71,9 +71,9 @@ layout: default
 
 
                 <td style="padding: 5px;" align="right">
+                  <input style="background-color: transparent; border: none; text-align: right;" class="nbor" type="text" name="prc20" size="6" value="0" readonly="">
                   <input style="background-color: transparent; border: none; text-align: right;" class="nbor" type="hidden" name="prc21" size="6" value="0" readonly="">
                   <input style="background-color: transparent; border: none; text-align: right;" class="nbor" type="hidden" name="prc22" size="6" value="0" readonly="">
-                  <input style="background-color: transparent; border: none; text-align: right;" class="nbor" type="hidden" name="prc23" size="6" value="0" readonly="">                  
                 </td>
               </tr>
               <tr style="border-bottom: 1px solid #ddd;">
@@ -93,8 +93,9 @@ layout: default
                   </label>
                 </td>
                 <td style="padding: 5px;" align="right">
-                  <input style="background-color: transparent; border: none; text-align: right;" class="nbor" type="text" name="prc11" size="6" value="0" readonly="">
-                  <input style="background-color: transparent; border: none; text-align: right;" class="nbor" type="text" name="prc12" size="6" value="0" readonly="">
+                  <input style="background-color: transparent; border: none; text-align: right;" class="nbor" type="text" name="prc10" size="6" value="0" readonly="">
+                  <input style="background-color: transparent; border: none; text-align: right;" class="nbor" type="hidden" name="prc11" size="6" value="0" readonly="">
+                  <input style="background-color: transparent; border: none; text-align: right;" class="nbor" type="hidden" name="prc12" size="6" value="0" readonly="">
                 </td>
               </tr>
             <tr style="border-bottom: 1px solid #ddd;">
@@ -114,8 +115,9 @@ layout: default
                   </label>
                 </td>
                 <td style="padding: 5px;" align="right">
-                  <input style="background-color: transparent; border: none; text-align: right;" class="nbor" type="text" name="prc01" size="6" value="0" readonly="">
-                  <input style="background-color: transparent; border: none; text-align: right;" class="nbor" type="text" name="prc02" size="6" value="0" readonly="">
+                  <input style="background-color: transparent; border: none; text-align: right;" class="nbor" type="text" name="prc00" size="6" value="0" readonly="">
+                  <input style="background-color: transparent; border: none; text-align: right;" class="nbor" type="hidden" name="prc01" size="6" value="0" readonly="">
+                  <input style="background-color: transparent; border: none; text-align: right;" class="nbor" type="hidden" name="prc02" size="6" value="0" readonly="">
                 </td>
               </tr>
               <tr style="border-bottom: 1px solid #ddd;border-top: 1px solid #ddd;">
@@ -260,9 +262,13 @@ var op = new Array ();    // accumulate options here
     else op[i] = "";
   }
   document.orderf["prc" + nr].value = Dollar (qty * amt);
-  document.orderf["prc110"].value = Dollar (Number(document.orderf["prc111"].value) 
-                                             + Number(document.orderf["prc112"].value) 
-                                             + Number(document.orderf["prc113"].value));
+  document.orderf["prc20"].value = Dollar (Number(document.orderf["prc21"].value) 
+                                             + Number(document.orderf["prc22"].value));
+  document.orderf["prc10"].value = Dollar (Number(document.orderf["prc11"].value) 
+                                             + Number(document.orderf["prc12"].value));
+  document.orderf["prc00"].value = Dollar (Number(document.orderf["prc01"].value) 
+                                             + Number(document.orderf["prc02"].value));
+  
   if (cntr == 0) order = new Object (); // zap object
   cntr = cntr + 1;               // bump counter so no zap next time
   order[id] = new Object ();     // create new entry
