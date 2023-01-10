@@ -19,7 +19,6 @@ $heart: #fb866a;
 body {
   font-family: 'Lato', arial, sans-serif;
   color: $text-color;
-  width: fit-content;
   font-size: 16px;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -573,6 +572,9 @@ pre code {
 }
 /* Extra small devices (phones, less than 768px) */
 @media (max-width: 767px) {
+  body {
+    width: fit-content;
+  }
   .header .main-nav button {
     margin-right: 0;
   }
