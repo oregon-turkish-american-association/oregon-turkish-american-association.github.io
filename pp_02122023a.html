@@ -38,9 +38,11 @@ layout: default
       <div style="margin-top:100px;text-align:left;">
         <h2 class="title text-center" style="margin-bottom: 0px;">ORTA Community Gathering: Bean-Rice Event<br>Sunday, February 12th, 2023, 1PM-4PM</h2>
         <h4 style="
-    text-align: center;">Hillsboro Community Senior Center | <a href="https://goo.gl/maps/ywJ1tfWm9hMeiaGe6">750 SE 8th Ave, Hillsboro, OR 97123</a></h4>
+    text-align: center;">Hillsboro Community Senior Center | <a href="https://goo.gl/maps/ywJ1tfWm9hMeiaGe6">750 SE 8th Ave, Hillsboro, OR 97123</a>
+          <br>
+          <img width="20%" src="images/menu.png" style="padding-top: 30px;">
+        </h4>
         <br>
-        <img width="75%" src="images/menu.png" style="padding-bottom: 30px;">
             <!-- Payment Form Starts Here -->
             <form class="form-inline" role="form" name="orderf" id="orderf" method="post" action="javascript:void 0;" style="
     text-align: center;
@@ -163,11 +165,12 @@ layout: default
             <!-- Payment Form Ends Here -->
         
         
-        NOTES
+
          <ul style="
     text-align: left;
     align-items: left;
     font-size: smaller;
+    margin-left: 200px;
 ">
            <li style="
     text-align: left;
@@ -340,9 +343,9 @@ var i,j=0,des;
   
   strn = strn + "&custom=\"" + document.orderf["contact"].value +"\"";
   
-  if (j > 0) window.open (strn, "paypal", winpar);
+  //if (j > 0) window.open (strn, "paypal", winpar);
   
-  //window.location.href = strn;
+  window.location.href = strn;
 }
 
 
