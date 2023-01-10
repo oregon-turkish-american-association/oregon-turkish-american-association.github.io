@@ -43,9 +43,8 @@ layout: default
         <img width="75%" src="images/orta3.png" style="padding-bottom: 30px;">
       <form target="_self" action="https://www.paypal.com/cgi-bin/webscr" method="post">
         <!-- Identify your business so that you can collect the payments. -->
-        <!-- <input type="hidden" name="business" value="paypal@ortapdx.org"> -->
-        <input type="hidden" name="business" value="mae@aliergin.com">
-    
+        <input type="hidden" name="business" value="paypal@ortapdx.org">
+            
         <!-- Specify an Add to Cart button. -->
         <input type="hidden" name="cmd" value="_cart">
         <input type="hidden" name="add" value="1">
@@ -125,7 +124,7 @@ layout: default
             </select>
         </p>
 
-    <p style="padding-top:20px;padding-bottom:40px;">
+    <p style="padding-top:20px;padding-bottom:0px;">
     
         <!-- Display the payment button. -->
         <input type="image" name="submit"
@@ -136,6 +135,19 @@ layout: default
         </p>
     </form>
     
+    <form target="_self" action="https://www.paypal.com/cgi-bin/webscr" method="post">
+    <input type="hidden" name="business" value="paypal@ortapdx.org">
+    <input type="hidden" name="cmd" value="_cart">
+    <input type="hidden" name="display" value="1">
+
+    <p style="padding-top:0px;padding-bottom:40px;">
+      <input type="image" name="submit"
+        src="https://www.paypalobjects.com/en_US/i/btn/btn_viewcart_LG.gif"
+        alt="Add to Cart">
+      <img alt="" width="1" height="1"
+        src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" >
+     </p>
+</form>
 <p/>       
         
         NOTES
