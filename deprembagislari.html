@@ -80,7 +80,7 @@ layout: default
         <input type="hidden" name="option_select3" value="50D">
         <input type="hidden" name="option_amount3" value="50">
         <input type="hidden" name="option_select4" value="CustomD">
-        <p id="id_os1">
+        <p id="id_os1" style="visibility: hidden;">
          <label for="box">Enter Custom Amount in USD: $</label> 
          <textarea id="customBox" name="option_amount4" rows="1" cols="5"></textarea>
          <label for="box">.00</label> 
@@ -145,7 +145,7 @@ layout: default
 
     <script type="text/javascript">
     $('#os0').on('change', function () {
-        $("#id_os1").css('visibility', (this.value == 'CustomD' || this.value == 'Choose an amount') ? 'visible' : 'hidden');
+        $("#id_os1").css('visibility', (this.value == 'CustomD') ? 'visible' : 'hidden');
     });
 
     </script>
