@@ -36,11 +36,11 @@ layout: default
 <section id="donate" class="donate section text-center">
   <div class="container">
       <div style="margin-top:100px;text-align:center;">
-        <h2 class="title text-center" style="margin-bottom: 0px;">ORTA Community Gathering: Bean and Rice Feast<br>Sunday, February 12th, 2023 @ 1pm-4pm</h2>
+        <h2 class="title text-center" style="margin-bottom: 0px;">ORTA Earthquake Donation Campaign<br>February 2023</h2>
         <h4 style="
     text-align: center;">To Be Added Facility Name | <a href="https://goo.gl/maps/">000 Unknown St., Nowhere, OR 99999</a></h4>
         <br>
-        <img width="75%" src="images/orta3.png" style="padding-bottom: 30px;">
+        <img width="75%" src="images/na.png" style="padding-bottom: 30px;">
       <form target="_self" action="https://www.paypal.com/cgi-bin/webscr" method="post">
         <!-- Identify your business so that you can collect the payments. -->
         <input type="hidden" name="business" value="paypal@ortapdx.org">
@@ -58,9 +58,9 @@ layout: default
         <!-- Provide a drop-down menu option field with prices. -->
         <p id="id_os0">
         <input type="hidden" name="on0" value="Ticket Type">
-        <label for="os0">Ticket Type</label>
+        <label for="os0">Donation Amount in USD: </label>
         <select name="os0" id="os0">
-            <option value="Select type of ticket">-- Select the amount to donate--</option>
+            <option value="Choose an amount">--Choose an amount--</option>
             <option value="500D">$500.00</option>
             <option value="250D">$250.00</option>
             <option value="100D">$100.00</option>
@@ -81,7 +81,7 @@ layout: default
         <input type="hidden" name="option_amount3" value="50">
         <input type="hidden" name="option_select4" value="CustomD">
         <p id="id_os1">
-         <label for="box">Custom Donation Amount: $</label> 
+         <label for="box">Enter Custom Amount in USD: $</label> 
          <textarea id="customBox" name="option_amount4" rows="1" cols="5"></textarea>
          <label for="box">.00</label> 
         </p>
@@ -90,27 +90,13 @@ layout: default
     
         <!-- Display the payment button. -->
         <input type="image" name="submit"
-            src="https://www.paypalobjects.com/en_US/i/btn/btn_cart_LG.gif"
-            alt="Add to Cart">
+            src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif"
+            alt="Donate Now">
         <img alt="" width="1" height="1"
             src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" >
         </p>
     </form>
     
-    <form target="_self" action="https://www.paypal.com/cgi-bin/webscr" method="post">
-    <input type="hidden" name="business" value="paypal@ortapdx.org">
-    <input type="hidden" name="cmd" value="_cart">
-    <input type="hidden" name="display" value="1">
-    <input type="hidden" name="shopping_url" value="https://ortapdx.org/deprembagislari.html">      
-
-    <p style="padding-top:0px;padding-bottom:40px;">
-      <input type="image" name="submit"
-        src="https://www.paypalobjects.com/en_US/i/btn/btn_viewcart_LG.gif"
-        alt="Add to Cart">
-      <img alt="" width="1" height="1"
-        src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" >
-     </p>
-</form>
 <p/>       
         
         NOTES
@@ -159,7 +145,7 @@ layout: default
 
     <script type="text/javascript">
     $('#os0').on('change', function () {
-        $("#id_os1").css('visibility', (this.value == 'CustomD') ? 'visible' : 'hidden');
+        $("#id_os1").css('visibility', (this.value == 'CustomD' || this.value == 'Choose an amount') ? 'visible' : 'hidden');
     });
 
     </script>
