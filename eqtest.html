@@ -42,13 +42,7 @@ layout: default
     text-align: center;">Please offer your helping hand to the people affected by the earthquake.</a></h4>
         <br>
 
-        <ol id="hr">
-          <script id="hr-template" type="text/x-handlebars-template">
-            <li>
-              <strong>{{cells.donors}} {{cells.raised}} {{cells.target}}</strong>
-            </li>
-          </script>
-        </ol>
+      <table id="donations-table"></table>
                                                             
       <form target="_self" action="https://www.paypal.com/cgi-bin/webscr" method="post">
         <!-- Identify your business so that you can collect the payments. -->
@@ -159,21 +153,16 @@ layout: default
 <!-- Load jQuery, Sheetrock and Handlebars from Unpkg -->
 <script src="https://unpkg.com/jquery@3.6.0/dist/jquery.slim.min.js"></script>
 <script src="https://unpkg.com/sheetrock@1.2.0/dist/sheetrock.min.js"></script>
-<script src="https://unpkg.com/handlebars@4.5.0/dist/handlebars.min.js"></script>
                                                                      
 <script type="text/javascript">
      // Define spreadsheet URL.
      var mySpreadsheet = 'https://docs.google.com/spreadsheets/d/1Zw-quf2s2rfjehVLrbRJzs3ZLSTWLiLRSMy_EFAVJvA/edit#gid=0';
-  
-    // Compile the Handlebars template for HR leaders.
-    var HRTemplate = Handlebars.compile($('#hr-template').html());
 
     // Load top five HR leaders.
-    $('#hr').sheetrock({
+    $('#donations-table').sheetrock({
       url: mySpreadsheet,
       query: "select A,B,C",
       fetchSize: 2,
-      rowTemplate: HRTemplate
     });
                                                                   
     $('#os0').on('change', function () {
