@@ -164,17 +164,19 @@ layout: default
  
      var mySpreadsheet = 'https://docs.google.com/spreadsheets/d/1Zw-quf2s2rfjehVLrbRJzs3ZLSTWLiLRSMy_EFAVJvA/edit#gid=0';
      var HRTemplate = Handlebars.compile($('#hr-template').html());
-
-    // Load top five team RBI leaders.
-    $('#hr').sheetrock({
-      url: mySpreadsheet,
-      query: "select A,B,C",
-      fetchSize: 2,
-      labels: ['Donors', 'Raised', 'Goal'],
-      rowTemplate: HRTemplate
-    });                           
+                 
                                                                   
     $('#os0').on('change', function () {
+
+        // Load top five team RBI leaders.
+        $('#hr').sheetrock({
+          url: mySpreadsheet,
+          query: "select A,B,C",
+          fetchSize: 2,
+          labels: ['Donors', 'Raised', 'Goal'],
+          rowTemplate: HRTemplate
+        });  
+                           
         $("#id_os1").css('visibility', (this.value == 'CustomD') ? 'visible' : 'hidden');
     });
 
