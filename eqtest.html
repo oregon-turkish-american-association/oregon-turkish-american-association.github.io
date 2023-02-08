@@ -161,8 +161,8 @@ layout: default
     // Load top five HR leaders.
     $('#donations-table').sheetrock({
       url: mySpreadsheet,
-      query: "select A,B,C,D,E,F,G,H,I,J,K",
-      fetchSize: 1,
+      query: "select A",
+      fetchSize: 2,
     });
                                                                   
     $('#os0').on('change', function () {
