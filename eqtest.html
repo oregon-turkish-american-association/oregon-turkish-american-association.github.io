@@ -33,14 +33,6 @@ layout: default
 </header><!--//header-->
 <p><br></p>
 
-<ol id="hr">
-  <script id="hr-template" type="text/x-handlebars-template">
-    <li>
-      <strong>{{cellsArray.[0]}} {{cellsArray.[1]}} {{cellsArray.[2]}}</strong>
-    </li>
-  </script>
-</ol>
-
 <!-- ******MEMBERSHIP****** -->
 <section id="donate" class="donate section text-center">
   <div class="container" style="background-image: url('images/donation.png');background-repeat: no-repeat;background-size: 100% 70%;background-color: #cec7c1">
@@ -49,6 +41,15 @@ layout: default
         <h4 style="padding-bottom:40px;
     text-align: center;">Please offer your helping hand to the people affected by the earthquake.</a></h4>
         <br>
+
+        <ol id="hr">
+          <script id="hr-template" type="text/x-handlebars-template">
+            <li>
+              <strong>{{cells.donors}} {{cells.raised}} {{cells.target}}</strong>
+            </li>
+          </script>
+        </ol>
+                                                            
       <form target="_self" action="https://www.paypal.com/cgi-bin/webscr" method="post">
         <!-- Identify your business so that you can collect the payments. -->
         <input type="hidden" name="business" value="paypal@ortapdx.org">
