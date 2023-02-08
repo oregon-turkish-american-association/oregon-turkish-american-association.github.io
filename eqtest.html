@@ -60,12 +60,12 @@ layout: dynamic
         <input type="hidden" name="currency_code" value="USD">
         <input type="hidden" name="shopping_url" value="https://ortapdx.org/earthquakedonations.html">
         
-        <div class="container" style="width: -webkit-fill-available;">     
-        <ol id="hr" style="width: 80%;-webkit-text-stroke-width: medium;background-color: white;border-style: solid;">
+        <div class="container" style="width: fit-content;text-align: center;">     
+        <ol id="hr" style="width: 80%;-webkit-text-stroke-width: medium;background-color: white;border-style: solid;padding-inline-start: 0;">
           <script id="hr-template" type="text/x-handlebars-template">
-          {% raw %}
+          &hearts;{% raw %}
             So far, {{cells.Donors}} people donated {{cells.Raised}} towards our {{cells.Goal}} goal.
-          {% endraw %}
+          {% endraw %}&hearts;
           </script>
         </ol>
         </div>
