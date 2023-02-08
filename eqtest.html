@@ -63,12 +63,12 @@ layout: default
 
         <ol id="hr">
           <script id="hr-template" type="text/x-handlebars-template">
-            <li>
-              <strong>{{cells.Donors}} {{cells.Raised}} {{cells.Goal}}</strong>
-            </li>
+              {{cells.Donors}} {{cells.Raised}} {{cells.Goal}}</strong>
           </script>
         </ol>
-       
+
+                                                                    
+                                                                    
         <!-- Provide a drop-down menu option field with prices. -->
         <p id="id_os0">
         <input type="hidden" name="on0" value="Ticket Type">
@@ -161,11 +161,9 @@ layout: default
 
                                                                    
 <script type="text/javascript">
-     // Define spreadsheet URL.
+ 
      var mySpreadsheet = 'https://docs.google.com/spreadsheets/d/1Zw-quf2s2rfjehVLrbRJzs3ZLSTWLiLRSMy_EFAVJvA/edit#gid=0';
-
-    // Compile Handlebars template for team RBI leaders.
-    var HRTemplate = Handlebars.compile($('#hr-template').html());
+     var HRTemplate = Handlebars.compile($('#hr-template').html());
 
     // Load top five team RBI leaders.
     $('#hr').sheetrock({
