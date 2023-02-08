@@ -33,7 +33,14 @@ layout: default
 </header><!--//header-->
 <p><br></p>
 
-<table id="statistics" class="table table-condensed table-striped"></table>
+<ol id="hr">
+  <script id="hr-template" type="text/x-handlebars-template">
+    <li>
+      <strong>{{cellsArray.[0]}} {{cellsArray.[1]}} {{cellsArray.[2]}}</strong>
+    </li>
+  </script>
+</ol>
+
 <!-- ******MEMBERSHIP****** -->
 <section id="donate" class="donate section text-center">
   <div class="container" style="background-image: url('images/donation.png');background-repeat: no-repeat;background-size: 100% 70%;background-color: #cec7c1">
@@ -156,9 +163,15 @@ layout: default
      // Define spreadsheet URL.
      var mySpreadsheet = 'https://docs.google.com/spreadsheets/d/1Zw-quf2s2rfjehVLrbRJzs3ZLSTWLiLRSMy_EFAVJvA/edit#gid=0';
   
-     // Load an entire worksheet.
-     $('#statistics').sheetrock({
-      url: mySpreadsheet
+    // Compile the Handlebars template for HR leaders.
+    var HRTemplate = Handlebars.compile($('#hr-template').html());
+
+    // Load top five HR leaders.
+    $('#hr').sheetrock({
+      url: mySpreadsheet,
+      query: "select A,B,C",
+      fetchSize: 1,
+      rowTemplate: HRTemplate
     });
                                                                   
     $('#os0').on('change', function () {
