@@ -33,17 +33,7 @@ layout: default
 </header><!--//header-->
 <p><br></p>
 
-<!-- Load jQuery and Sheetrock from Unpkg -->
-<script src="https://unpkg.com/jquery@3.6.0/dist/jquery.slim.min.js"></script>
-<script src="https://unpkg.com/sheetrock@1.2.0/dist/sheetrock.min.js"></script>
-// Define spreadsheet URL.
-var mySpreadsheet = 'https://docs.google.com/spreadsheets/d/1Zw-quf2s2rfjehVLrbRJzs3ZLSTWLiLRSMy_EFAVJvA/edit#gid=0';
 <table id="statistics" class="table table-condensed table-striped"></table>
-// Load an entire worksheet.
-$('#statistics').sheetrock({
-  url: mySpreadsheet
-});
-
 <!-- ******MEMBERSHIP****** -->
 <section id="donate" class="donate section text-center">
   <div class="container" style="background-image: url('images/donation.png');background-repeat: no-repeat;background-size: 100% 70%;background-color: #cec7c1">
@@ -157,9 +147,20 @@ $('#statistics').sheetrock({
 <!--//how-->
 
 <!-- Start of Script -->
-    <script type="text/javascript" src="https://code.jquery.com/jquery-1.7.1.min.js"></script>
-
-    <script type="text/javascript">
+<script type="text/javascript" src="https://code.jquery.com/jquery-1.7.1.min.js"></script>
+<!-- Load jQuery and Sheetrock from Unpkg -->
+<script src="https://unpkg.com/jquery@3.6.0/dist/jquery.slim.min.js"></script>
+<script src="https://unpkg.com/sheetrock@1.2.0/dist/sheetrock.min.js"></script>
+                                                                     
+<script type="text/javascript">
+     // Define spreadsheet URL.
+     var mySpreadsheet = 'https://docs.google.com/spreadsheets/d/1Zw-quf2s2rfjehVLrbRJzs3ZLSTWLiLRSMy_EFAVJvA/edit#gid=0';
+  
+     // Load an entire worksheet.
+     $('#statistics').sheetrock({
+      url: mySpreadsheet
+    });
+                                                                  
     $('#os0').on('change', function () {
         $("#id_os1").css('visibility', (this.value == 'CustomD') ? 'visible' : 'hidden');
     });
