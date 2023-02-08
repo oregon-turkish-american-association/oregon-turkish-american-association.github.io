@@ -63,7 +63,11 @@ layout: dynamic
 
         <ol id="hr">
           <script id="hr-template" type="text/x-handlebars-template">
-              {{cells.Donors}} {{cells.Raised}} {{cells.Goal}}
+          {% highlight html %}
+          {% raw %}
+            <div>{{cells.Donors}} {{cells.Raised}} {{cells.Goal}}</div>
+          {% endraw %}
+          {% endhighlight %}
           </script>
         </ol>
 
