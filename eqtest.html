@@ -64,7 +64,7 @@ layout: default
         <ol id="hr">
           <script id="hr-template" type="text/x-handlebars-template">
             <li>
-              <strong>{{cells.Donors}} {{cells.Raised}}</strong>, {{cells.Goal}}
+              <strong>{{cells.Donors}} {{cells.Raised}} {{cells.Goal}}</strong>
             </li>
           </script>
         </ol>
@@ -164,16 +164,17 @@ layout: default
      // Define spreadsheet URL.
      var mySpreadsheet = 'https://docs.google.com/spreadsheets/d/1Zw-quf2s2rfjehVLrbRJzs3ZLSTWLiLRSMy_EFAVJvA/edit#gid=0';
 
-    // Compile the Handlebars template for HR leaders.
+    // Compile Handlebars template for team RBI leaders.
     var HRTemplate = Handlebars.compile($('#hr-template').html());
 
-    // Load top five HR leaders.
+    // Load top five team RBI leaders.
     $('#hr').sheetrock({
       url: mySpreadsheet,
       query: "select A,B,C",
-      fetchSize: 1,
+      fetchSize: 2,
+      labels: ['Donors', 'Raised', 'Goal'],
       rowTemplate: HRTemplate
-    });
+    });                           
                                                                   
     $('#os0').on('change', function () {
         $("#id_os1").css('visibility', (this.value == 'CustomD') ? 'visible' : 'hidden');
